@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --inline --mode development --open",
-    "test": "jest"
+    "test": "jest",
+    "cy:open": "yarn start --silent & cypress open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "serialize-javascript": "^3.0.0"
@@ -23,6 +26,7 @@
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
+    "cypress": "^4.0.2",
     "eslint": "^4.19.1",
     "jest": "^25.1.0",
     "js-yaml": "^3.13.1",
