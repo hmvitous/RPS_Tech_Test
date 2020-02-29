@@ -33,4 +33,15 @@
 #computer-title {
     width: 100%;
     text-align: right;
+    margin-right: 100px;
+}
+
+#player-title {
+    margin-left: 100px;
+}
+
+#vs {
+    text-align: center;
+    width: 100%;
+    padding-left: 18%;
 }
