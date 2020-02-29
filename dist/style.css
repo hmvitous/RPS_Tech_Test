@@ -24,3 +24,13 @@
     text-align: center;
     bottom: 0;
 }
+
+.title {
+    display: inline-flex;
+    width: 100%;
+}
+
+#computer-title {
+    width: 100%;
+    text-align: right;
+}
