@@ -45,3 +45,12 @@
     width: 100%;
     padding-left: 18%;
 }
+
+#rock-button {
+    margin-left: 20px;
+    margin-right: 60px;
+}
+
+#scissors-button {
+    margin-left: 50px;
+}
