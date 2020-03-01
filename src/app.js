@@ -1,24 +1,18 @@
-import React from 'react'
-import Main from './Main'
-import Footer from './Footer'
-import Player from './Player'
+import React from "react";
+import ReactDOM from "react-dom";
+import Main from "./Main";
+import Footer from "./Footer";
 
-const choices = [ 'rock', 'paper', 'scissors' ]
-class App extends Component {
-    state = {
-        player: choices[0],
-        computer: choices[0],
-        winner: ''
-    }
+const App = () => {
+  return (
+    <>
+      <Main />
+      <Footer />
+    </>
+  );
+};
 
-    render () {
-        const [player, computer, winner] = this.state
-        return (
-            <>
-                <Main />
-                <Player />
-                <Footer />
-            </>
-        )
-    }
-}
+ReactDOM.render(
+<App />, 
+document.getElementById("app")
+);
