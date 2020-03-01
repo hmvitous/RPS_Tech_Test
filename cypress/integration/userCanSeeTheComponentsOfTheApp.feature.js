@@ -22,18 +22,4 @@ describe('User can see components of the app', () => {
       cy.get('#scissors-button').should('contain', 'Scissors')
     })
   })
-
-  describe('displays the titles', () => {
-    it('displays the player title', () => {
-      cy.get('#player-title').should('exist')
-    })
-
-    it('displays the VS. title', () => {
-      cy.get('#vs').should('exist')
-    })
-
-    it('displays the computer title', () => {
-      cy.get('#computer-title').should('exist')
-    })
-  })
 });
