@@ -1,16 +1,14 @@
-#rock-image {
+#player-image {
     height: 100px;
     width: 100px;
+    padding-left: 90px;
 }
 
-#paper-image {
+#computer-image {
     height: 100px;
     width: 100px;
-}
-
-#scissors-image {
-    height: 100px;
-    width: 100px;
+    float: right;
+    padding-right: 120px;
 }
 
 #banner-image {
