@@ -4,7 +4,7 @@ const Main = () => {
   return (
     <div>
       <div className="banner">
-        <img id="banner-image" src="../dist/images/no-image.jpg"></img>
+        <img id="banner-image" src="../dist/images/paper.jpg"></img>
       </div>
       <div>
         <div className="title">
@@ -12,18 +12,40 @@ const Main = () => {
           <h3 id="vs">VS.</h3>
           <h1 id="computer-title">Computer</h1>
         </div>
-      </div>
-
-      <div className="image">
-        <img id="rock-image" src="../dist/images/no-image.jpg"></img>
-        <img id="paper-image" src="../dist/images/no-image.jpg"></img>
-        <img id="scissors-image" src="../dist/images/no-image.jpg"></img>
+        <div>
+          <Player choices={player}></Player>
+          <Player choices={computer}></Player>
+        </div>
+        selectItem = item => {this.setState((player: item), (message: ""))}
       </div>
 
       <div className="button">
-        <button id="rock-button">Rock</button>
-        <button id="paper-button">Paper</button>
-        <button id="scissors-button">Scissors</button>
+        <button
+          id="rock-button"
+          onClick={() => {
+            this.selectItem("rock");
+          }}
+        >
+          Rock
+        </button>
+
+        <button
+          id="paper-button"
+          onClick={() => {
+            this.selectItem("paper");
+          }}
+        >
+          Paper
+        </button>
+
+        <button
+          id="scissors-button"
+          onClick={() => {
+            this.selectItem("scissors");
+          }}
+        >
+          Scissors
+        </button>
       </div>
     </div>
   );
