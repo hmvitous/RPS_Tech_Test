@@ -4,19 +4,19 @@ const Main = () => {
   return (
     <div>
       <div className='banner'>
-        <img id='banner-image' src='../dist/images/no-image.jpg'></img>
+        <img id='banner-image' src='../dist/images/banner.png'></img>
       </div>
       <div>
         <div className='title'>
           <h1 id='player-title'>Player</h1>
-          <h3 id='vs'>VS.</h3>
+          <img id='vs' src='../dist/images/vs.png'></img>
           <h1 id='computer-title'>Computer</h1>
         </div>
       </div>
 
       <div className='image'>
-        <img id='player-image' src='../dist/images/no-image.jpg'></img>
-        <img id='computer-image' src='../dist/images/no-image.jpg'></img>
+        <img id='player-image' src='../dist/images/paper.png'></img>
+        <img id='computer-image' src='../dist/images/rock.png'></img>
       </div>
 
       <div className='button'>
