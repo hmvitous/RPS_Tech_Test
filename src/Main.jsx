@@ -7,7 +7,8 @@ class Main extends Component {
     super(props);
     this.state = { 
       player: <PlayerImage type="Player" choice="0" />,
-      computer: <PlayerImage type="Computer" choice="0" />
+      computer: <PlayerImage type="Computer" choice="4" />,
+      result: "Play"
       
     };
     
@@ -19,39 +20,36 @@ class Main extends Component {
     const randomChoice = Math.floor(Math.random() * 3)+1
     console.log("player plays " + clickedChoice);
     console.log("computer plays " + randomChoice);
+    const result = this.getResult(clickedChoice, randomChoice)
+    console.log(result)
+
 
     this.setState({
       player: <PlayerImage type="Player" choice={clickedChoice} />,
-      computer: <PlayerImage type="Computer" choice={randomChoice} />
+      computer: <PlayerImage type="Computer" choice={randomChoice} />,
+      result: result
     });
     
-    const result = this.getResult(clickedChoice, randomChoice)
-    console.log(result)
   }
 
   getResult(clickedChoice, randomChoice) {
 
-    if (clickedChoice == randomChoice)
-    return "Tie"
+    if (clickedChoice == randomChoice) {
+      return "Tie"
+    }
 
-    if (clickedChoice == 1 && randomChoice == 3 )
-    return "You Win"
+    if (
+      (clickedChoice == 1 && randomChoice == 3 ) ||
+      (clickedChoice == 2 && randomChoice == 1 ) ||
+      (clickedChoice == 3 && randomChoice == 2 )
+      ) {
+      return "You Win"
+    }
 
-    if (clickedChoice == 1 && randomChoice == 2 )
     return "You Lose"
-
-    if (clickedChoice == 2 && randomChoice == 1 )
-    return "You Win"
-
-    if (clickedChoice == 2 && randomChoice == 3 )
-    return "You Lose"
-
-    if (clickedChoice == 3 && randomChoice == 1 )
-    return "You Lose"
-
-    if (clickedChoice == 3 && randomChoice == 2 )
-    return "You Win"
   }
+
+
 
   render() {
     return (
@@ -72,6 +70,7 @@ class Main extends Component {
             Scissors
           </button>
         </div>
+        <h1>{this.state.result}</h1>
       </div>
     );
   }
