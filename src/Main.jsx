@@ -13,6 +13,8 @@ class Main extends Component {
     };
     
     this.onButtonClick = this.onButtonClick.bind(this);
+    this.onReplayButtonClick = this.onReplayButtonClick.bind(this);
+
   }
 
   onButtonClick(event) {
@@ -31,6 +33,16 @@ class Main extends Component {
     });
     
   }
+
+  onReplayButtonClick(event) {
+    this.setState({
+      player: <PlayerImage type="Player" choice="0" />,
+      computer: <PlayerImage type="Computer" choice="4" />,
+      result: "Play"
+    });
+    
+  }
+
 
   getResult(clickedChoice, randomChoice) {
 
@@ -57,7 +69,7 @@ class Main extends Component {
         <GameHeader />
         {this.state.player}
 
-        <img src="../dist/images/vs.png"></img>
+        <img className="vs" src="../dist/images/vs.png"></img>
         {this.state.computer}
         <div className="button">
           <button id="3" onClick={this.onButtonClick}>
@@ -69,6 +81,10 @@ class Main extends Component {
           <button id="2" onClick={this.onButtonClick}>
             Scissors
           </button>
+          <button onClick={this.onReplayButtonClick}>
+            Replay
+          </button>
+
         </div>
         <h1>{this.state.result}</h1>
       </div>
