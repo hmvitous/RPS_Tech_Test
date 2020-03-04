@@ -3,23 +3,18 @@ describe("User can select an option", () => {
     cy.visit("http://localhost:3000");
   });
 
-  describe("select rock option", () => {
-    beforeEach(() => {
-      cy.get("#rock-button").click();
-    });
-
-    it("rock image should display", () => {
-      cy.get("#rock-image").should("exist");
-    });
-
-    it("does not display paper image", () => {
-      cy.get("#paper-image").should("not.exist");
-    });
-
-    it("does not display scissors image", () => {
-      cy.get("#scissors-image").should("not.exist");
-    });
+  it("rock image should display", () => {
+    cy.get("#3").click();
+    cy.fixture("testing_images/rock.png").should("exist");
   });
 
+  it("paper image should display", () => {
+    cy.get("#1").click();
+    cy.fixture("testing_images/paper.png").should("exist");
+  });
 
+  it("scissors image should display", () => {
+    cy.get("#2").click();
+    cy.fixture("testing_images/scissors.png").should("exist");
+  });
 });
