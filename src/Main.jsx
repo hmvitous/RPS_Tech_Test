@@ -8,7 +8,7 @@ class Main extends Component {
     this.state = { 
       player: <PlayerImage type="Player" choice="0" />,
       computer: <PlayerImage type="Computer" choice="4" />,
-      result: "Play"
+      result: "Choose an option"
     };
     
     this.onButtonClick = this.onButtonClick.bind(this);
@@ -31,7 +31,7 @@ class Main extends Component {
     this.setState({
       player: <PlayerImage type="Player" choice="0" />,
       computer: <PlayerImage type="Computer" choice="4" />,
-      result: "Play"
+      result: "Choose an option"
     });
   }
 
@@ -70,7 +70,7 @@ class Main extends Component {
             Scissors
           </button>
           <button onClick={this.onReplayButtonClick}>
-            Replay
+            Play again
           </button>
         </div>
         <h1>{this.state.result}</h1>
