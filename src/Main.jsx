@@ -69,7 +69,7 @@ class Main extends Component {
           <button id="2" onClick={this.onButtonClick}>
             Scissors
           </button>
-          <button onClick={this.onReplayButtonClick}>
+          <button id="again" onClick={this.onReplayButtonClick}>
             Play again
           </button>
         </div>
