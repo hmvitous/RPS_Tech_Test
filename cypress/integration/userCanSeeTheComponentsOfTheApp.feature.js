@@ -9,6 +9,12 @@ describe('User can see components of the app', () => {
     });
   });
 
+  describe('displays the banner image', () => {
+    it("displays the banner image", () => {
+      cy.get("#banner-image").should("exist")
+    })
+  })
+
   describe('displays the three options', () => {
     it('displays rock option', () => {
       cy.get('#3').should('contain', 'Rock')
