@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
-    "start": "webpack-dev-server --inline --mode development --open",
-    "test": "jest",
-    "cy:open": "yarn start --silent & cypress open"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -35,5 +30,12 @@
     "webpack": "^4.41.6",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.10.3"
+  },
+  
+  "scripts": {
+    "start": "webpack-dev-server --inline --mode development --open",
+    "test": "jest",
+    "cy:open": "yarn start --silent & cypress open"
   }
+
 }
