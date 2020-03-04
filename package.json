@@ -32,7 +32,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline --mode development --open",
+    "start": "node index.js",
     "test": "jest",
     "cy:open": "yarn start --silent & cypress open"
   }
