@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
 
 const Footer = () => {
   return (
     <footer>
-      <p id="footer">Made with React {React.version}</p>
+      <p id='footer'>Made with React {React.version}</p>
     </footer>
   );
 };

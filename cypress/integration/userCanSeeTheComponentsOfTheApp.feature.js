@@ -11,15 +11,15 @@ describe('User can see components of the app', () => {
 
   describe('displays the three options', () => {
     it('displays rock option', () => {
-      cy.get('#rock-button').should('contain', 'Rock')
+      cy.get('#3').should('contain', 'Rock')
     })
 
     it('displays paper option', () => {
-      cy.get('#paper-button').should('contain', 'Paper')
+      cy.get('#1').should('contain', 'Paper')
     })
 
     it('displays scissors option', () => {
-      cy.get('#scissors-button').should('contain', 'Scissors')
+      cy.get('#2').should('contain', 'Scissors')
     })
   })
 });
