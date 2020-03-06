@@ -9,7 +9,6 @@ Getting Started<br />
 You will need to install:<br />
     npm<br />
     Cypress<br />
-    Jest & enzyme<br />
 
 Running the tests<br />
     In terminal, type 'yarn cy:open', click run all tests to see the cypress tests.<br />
